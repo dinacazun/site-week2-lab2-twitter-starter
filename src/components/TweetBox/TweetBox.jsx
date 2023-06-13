@@ -1,7 +1,7 @@
 import TweetInput from "./TweetInput"
 import "./TweetBox.css"
 
-export default function TweetBox(props) {
+export default function TweetBox(userProfile, setTweets) {
   return (
     <div className="tweet-box">
       <TweetInput />
