@@ -2,11 +2,19 @@ import TweetInput from "./TweetInput"
 import "./TweetBox.css"
 
 export default function TweetBox({tweets, setTweets, userProfile, tweetText, setTweetText}) {
+  // const numCharactersLeft = 140
+  // const disableButton = true
+
   const handleOnTweetTextChange = (event) => {
     setTweetText(event.target.value)
   }
 
   const handleOnSubmit = () => {
+    // if(tweetText === ""){
+    //   disableButton = true
+    // } else {
+    //   disableButton = false
+    // }
     var newTweet = [...tweets]
     let arr = {name: userProfile.name, handle: userProfile.handle, 
     text: tweetText, comments: 0, retweets: 0, likes: 0, id: tweets.length}
